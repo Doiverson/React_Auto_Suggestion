@@ -1,6 +1,6 @@
 import React from 'react';
 import Autosuggest from 'react-autosuggest';
-import Moon from './connection/Moon';
+import Moon from './Moon';
 
 const moon = new Moon();
 
@@ -75,7 +75,7 @@ export default class Example extends React.Component {
     /////////////////////////
 
     /////////////////////////
-    onChange = (event, { newValue }) => {
+    onChangeValue = (event, { newValue }) => {
         this.setState({
             value: newValue
         });
@@ -144,7 +144,7 @@ export default class Example extends React.Component {
         const inputProps = {
             placeholder: 'Type a programming language',
             value,
-            onChange: this.onChange
+            onChange: this.onChangeValue
 
         };
 
